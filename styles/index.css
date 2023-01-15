@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root{
+    --background-color: #19252E;
+    --orange-color: #df8106;
+    --secondary-color: #bbbbbb;
+}
+canvas.particles-js-canvas-el{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1000;
+    margin: 0px;
+    width: 100%;
+    height: 100% !important;
+}
+
+*{ font-family: 'poppins', sans-serif; }
+
+body{
+    background: var(--background-color);
+}
+h1,h2,h3,h4,h5,h6,p,span,a,td{
+    cursor: pointer;
+}
+
+/* navbar styling */
+.nav-section .navbar-toggler{
+    border: none;
+}
+.nav-section .navbar-brand{
+    font-size: 22px;
+    color: white;
+}
+.nav-section .navbar-brand:hover{
+    color: white;
+}
+.nav-section .navbar-brand span{
+    color: var(--orange-color);
+}
+.nav-section .navbar-nav li{
+    margin: 0px 8px;
+}
+.nav-section .navbar-nav li a{
+    color: white !important;
+    font-size: 15px;
+}
+.nav-section .navbar-nav .nav-link::before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    background: white;
+    position: absolute;
+    bottom: 7px;
+    transition: 0.5s;
+}
+.nav-section .navbar-nav .nav-link:hover::before{
+    width: 17px;
+    height: 2px;
+}
+
+/* main-section styling */
+.main-section .row{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.main-section .row h1,h2,h3,p{
+    color: white;
+}
+.main-section .row h3{
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.main-section .row h3::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top : 10px;
+    width: 90px;
+    height: 2px;
+    background: white;
+    margin-left: 6px;
+}
+.main-section .row h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+.main-section .row h2{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 8px 0px;
+}
+.main-section p{
+    font-size: 13px;
+    margin-top: 13px;
+    line-height: 21px;
+    color: var(--secondary-color);
+}
+.main-section button{
+    border-radius: 10px;
+    font-size: 19px;
+    color: white;
+    background-color: var(--orange-color);
+    border: 2px solid var(--orange-color);
+    width: 113px;
+    margin-top: 10px;
+}
+.main-section button:hover{
+    animation: swing;
+    animation-duration: 0.5s;
+}
+.main-section img{
+    width: 50%;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+    .main-section .row h1{
+        font-size: 58px !important;
+    }
+}
+@media (max-width: 992px) and (min-width: 763px) {
+    .main-section .row h3{
+        font-size: 15px;
+    }
+    .main-section .row h1{
+        font-size: 40px;
+    }
+    .main-section .row h2{
+        font-size: 15px;
+    }
+    .main-section p{
+        font-size: 11px;
+    }
+}
+@media (max-width: 762px) and (min-width: 400px) {
+    .main-section{
+        margin: 55px 0px;
+    }
+    .main-section .row h3{
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .main-section .row h3::after{
+        width: 0px;
+    }
+    .main-section .row h1{
+        font-size: 46px;
+        text-align: center;
+    }
+    .main-section .row h2{
+        font-size: 15px;
+        text-align: center;
+    }
+    .main-section p{
+        font-size: 11px;
+        text-align: center;
+    }
+    .btn-container{
+        justify-content: center;
+        text-align: center;
+    }
+    .main-section img{
+        width: 60% !important;
+        margin-top: 20px;
+    }
+}
